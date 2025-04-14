@@ -1,0 +1,50 @@
+.reports{
+  padding: 20px 60px 30px 60px;
+  width: 100%;
+}
+/* .container{
+  width: 100%;
+} */
+.heads{
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.txets{
+  background-color: #42a4f59d;
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.paras{
+  font-size: 30px;
+  margin-bottom:10px ;
+}
+.report{
+  font-size: 16px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.862);
+  border-radius: 5px;
+}
+.report:hover{
+  background-color: #42a5f5;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.ic{
+  color: #008cff;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 880px){
+  .paras{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}

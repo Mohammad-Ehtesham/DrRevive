@@ -1,0 +1,162 @@
+:root{
+  --color1: #42A5F5;
+  --color2: #81C784;
+  --color3: #d7d2d2;
+  --color4: #9bd4cf;
+  --color5: #1565C0;
+  --color1o: #42a4f58e;
+  --color2o: #81c78490;
+  --color3o: #eeeeee8e;
+  --color4o: #b2dfdb84;
+  --color5o: #1565c081;
+}
+
+.functionality{
+  width: 100%;
+  padding: 30px 30px 0 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.category{
+  width: 50%;
+  display: grid;
+  grid-template-columns:auto auto;
+}
+
+.containerDesign{
+  width: 350px;
+  height: 130px;
+  border-radius: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  cursor: pointer;
+}
+.containerDesign:hover{
+  transform: translate(0px, -5px);
+  transition: all 0.3s ease-in-out;
+}
+.txt{
+  padding: 10px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+.head{
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.para{
+  font-size: 16px;
+  opacity: 0.7;
+}
+.icon{
+  padding: 7px;
+  align-items: center;
+  justify-self:self-end;
+}
+.appointment{
+  background-color: var(--color1o);
+  border: 3px solid var(--color1);
+}
+.hospital{
+  background-color: var(--color2o);
+  border: 3px solid var(--color2);
+}
+.specialities{
+  background-color: var(--color3o);
+  border: 3px solid var(--color3);
+}
+.Doctors{
+  background-color: var(--color4o);
+  border: 3px solid var(--color4);
+}
+.app{
+  color: var(--color1); 
+}
+.hos{
+  color: var(--color2); 
+}
+.spe{
+  color: var(--color3); 
+}
+.doc{
+  color: var(--color4); 
+}
+
+.checks{
+  margin-left: 20px;
+}
+.heading{
+  font-size: 30px;
+  color: black;
+  text-align: left;
+}
+
+.check1{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 20px;
+  /* border: 3px solid var(--color5); */
+  box-shadow: 0 0 10px 5px var(--color5o);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+.check1:hover{
+  transform: translate(0px, -5px);
+  transition: all 0.3s ease-in-out;
+}
+.nurse{
+  color: var(--color5);
+}
+.text{
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.ches{
+  display: flex;
+}
+
+/* Responsive Design  */
+@media (max-width: 1400px) {
+  .functionality{
+    grid-template-columns: 1fr;
+  }
+  .category{
+    width: 100%;
+    grid-template-columns: auto auto;
+  }
+  .containerDesign{
+    width: 90%;
+    margin: 10px;
+  }
+  .check1{
+    width: 90%;
+    margin: 10px;
+  }
+}
+@media (max-width: 710px) {
+  .category{
+    width: 100%;
+    grid-template-columns:  auto;
+  }
+  .ches{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .check1{
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
