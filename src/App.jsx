@@ -4,8 +4,13 @@ import Navbar from "./components/Navbar"; // Adjust the path as necessary
 import styled from "styled-components";
 import Home from "./components/Home";
 import Functionality from "./components/Functionality";
-import Accordin from "./components/Accordin";
 import Feedback from "./components/Feedback";
+import { Route, Routes } from "react-router-dom";
+import Bot from "./components/bot/Bot";
+import AuthPage from "./components/Authentication/signandlogin";
+import Doc from "./components/Doctors/Doc";
+import HealthCheckups from "./components/Doctors/HealthCheckups"; // Adjust the path as necessary
+import Authdesign from "./components/Authentication/Logout";
 
 const EmergencyTab = styled.div`
   position: fixed;
@@ -31,18 +36,47 @@ const EmergencyTab = styled.div`
     display: none;
   }
 `;
-
-function App() {
+function HomePage() {
   return (
     <>
       <div>
         <EmergencyTab>Emergency</EmergencyTab>
       </div>
-
       <Navbar />
       <Home />
       <Functionality />
       <Feedback />
+    </>
+  );
+}
+
+const Newpage = () => {
+  return (
+    <>
+      <h1>New Page</h1>
+      <p>This is a new page.</p>
+      <p>More content can go here.</p>
+      <p>Feel free to customize it as needed.</p>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* Add more routes here as needed */}
+        <Route path="/npage" element={<Newpage />} />
+        {/* <Route path="/login" element={<Front />} /> */}
+        <Route path="/login" element={<AuthPage />} />
+        <Route path="/chatbot" element={<Bot />} />
+        <Route path="/doctors" element={<Doc />} />
+        <Route path="/HealthCheckups" element={<HealthCheckups />} />
+        <Route path="/logindetails" element={<Authdesign />} />
+
+        {/* Example: <Route path="/about" element={<About />} /> */}
+      </Routes>
     </>
   );
 }

@@ -7,8 +7,8 @@ import { FaUserDoctor } from "react-icons/fa6";
 import { FaUserNurse } from "react-icons/fa";
 import { PiDnaFill } from "react-icons/pi";
 import Reports from "./Reports";
-import Banner from "./Banner";
 import Blog from "./Blog";
+import { Link } from "react-router-dom";
 
 const Functionality = () => {
   return (
@@ -54,7 +54,8 @@ const Functionality = () => {
               />
             </div>
           </div>
-          <div className="containerDesign Doctors">
+
+          <Link to="/doctors" className="containerDesign Doctors">
             <div className="txt">
               <h1 className="head">Doctors</h1>
               <p className="para">Top experts for your health</p>
@@ -66,21 +67,23 @@ const Functionality = () => {
                 className="doc"
               />
             </div>
-          </div>
+          </Link>
         </div>
         <div className="checks">
           <p className="heading">We can help you book </p>
           <div className="ches">
-            <div className="check1">
-              <div className="ico">
-                <FaUserNurse
-                  size={105}
-                  style={{ background: "transparent" }}
-                  className="nurse"
-                />
+            <Link to="/HealthCheckups">
+              <div className="check1">
+                <div className="ico">
+                  <FaUserNurse
+                    size={105}
+                    style={{ background: "transparent" }}
+                    className="nurse"
+                  />
+                </div>
+                <p className="text">Health Checkups</p>
               </div>
-              <p className="text">Health Checkups</p>
-            </div>
+            </Link>
             <div className="check1">
               <div className="ico">
                 <PiDnaFill

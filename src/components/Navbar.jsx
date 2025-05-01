@@ -6,6 +6,7 @@ import { FaAmbulance } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import myImg from "../assets/Logo.png";
 import "./Navbar.css"; // Assuming you have a CSS file for styling the Navbar
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isSearchOpen, setSearchOpen] = useState(false);
@@ -33,7 +34,9 @@ const Navbar = () => {
         }}
       >
         <div className="logo">
-          <img src={myImg} alt="Logo" />
+          <Link to={"/"}>
+            <img src={myImg} alt="Logo" />
+          </Link>
         </div>
         {!isSearchOpen && (
           <div className="nav-links">
@@ -42,12 +45,6 @@ const Navbar = () => {
                 <a href="#Hospitals" className="icon">
                   Hospitals
                 </a>
-              </li>
-              <li>
-                <a href="#Treatments">Treatments</a>
-              </li>
-              <li>
-                <a href="#services">Services</a>
               </li>
               <li>
                 <a href="#Enquiry">Quick Enquiry</a>
@@ -63,9 +60,9 @@ const Navbar = () => {
                   }}
                 />
               </li>
-              <li className="Articles">
-                <a href="#Articles">Articles</a>
-              </li>
+              <Link to="/login" className="link">
+                <li className="Articles">Login</li>
+              </Link>
               <li className="emergency">
                 <a href="#Emergency">
                   <FaAmbulance className="emerg" />{" "}
@@ -111,9 +108,7 @@ const Navbar = () => {
             </ul>
             <ul className={`nav-Mlinks `}>
               <li>Quick Enquiry</li>
-              <li>Treatments</li>
               <li>Hospitals</li>
-              <li>Services</li>
               <li>Articles</li>
             </ul>
           </div>
