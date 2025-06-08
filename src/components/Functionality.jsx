@@ -2,7 +2,7 @@ import React from "react";
 import "./functionality.css"; // Adjust the path as necessary
 import { FaHandshake } from "react-icons/fa";
 import { FaHospital } from "react-icons/fa";
-import { FaStethoscope } from "react-icons/fa6";
+import { FaShieldAlt } from "react-icons/fa";
 import { FaUserDoctor } from "react-icons/fa6";
 import { FaUserNurse } from "react-icons/fa";
 import { PiDnaFill } from "react-icons/pi";
@@ -30,7 +30,9 @@ const Functionality = () => {
           </div>
           <div className="containerDesign hospital">
             <div className="txt">
-              <h1 className="head">Hospitals</h1>
+              <Link to="/hospitals">
+                <h1 className="head">Hospitals</h1>
+              </Link>
               <p className="para">Health needs under one roof</p>
             </div>
             <div className="icon">
@@ -41,19 +43,21 @@ const Functionality = () => {
               />
             </div>
           </div>
-          <div className="containerDesign specialities">
-            <div className="txt">
-              <h1 className="head">Specialities</h1>
-              <p className="para">Our expeertise in Healthcare</p>
+          <Link to="/Insurance">
+            <div className="containerDesign specialities">
+              <div className="txt">
+                <h1 className="head">Insurance</h1>
+                <p className="para">Best policy for your Health</p>
+              </div>
+              <div className="icon">
+                <FaShieldAlt
+                  size={65}
+                  style={{ background: "transparent" }}
+                  className="spe"
+                />
+              </div>
             </div>
-            <div className="icon">
-              <FaStethoscope
-                size={65}
-                style={{ background: "transparent" }}
-                className="spe"
-              />
-            </div>
-          </div>
+          </Link>
 
           <Link to="/doctors" className="containerDesign Doctors">
             <div className="txt">
@@ -86,11 +90,13 @@ const Functionality = () => {
             </Link>
             <div className="check1">
               <div className="ico">
-                <PiDnaFill
-                  size={105}
-                  style={{ background: "transparent" }}
-                  className="nurse"
-                />
+                <Link to={"/testreport"}>
+                  <PiDnaFill
+                    size={105}
+                    style={{ background: "transparent" }}
+                    className="nurse"
+                  />
+                </Link>
               </div>
               <p className="text">Test & Services</p>
             </div>

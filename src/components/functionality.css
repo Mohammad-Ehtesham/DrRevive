@@ -1,12 +1,12 @@
 :root{
-  --color1: #42A5F5;
+  --color3: #42A5F5;
   --color2: #81C784;
-  --color3: #d7d2d2;
+  --color1: #d7d2d2;
   --color4: #9bd4cf;
   --color5: #1565C0;
-  --color1o: #42a4f58e;
+  --color3o: #42a4f58e;
   --color2o: #81c78490;
-  --color3o: #eeeeee8e;
+  --color1o: #eeeeee8e;
   --color4o: #b2dfdb84;
   --color5o: #1565c081;
 }

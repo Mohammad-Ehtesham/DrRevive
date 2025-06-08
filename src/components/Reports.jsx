@@ -11,7 +11,7 @@ const Reports = () => {
           <p className="paras">
             All medical records, reports & prescription in one place{" "}
           </p>
-          <a href="/reports" className="report">
+          <a href="/medical" className="report">
             View Reports
           </a>
         </div>

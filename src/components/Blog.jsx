@@ -17,7 +17,15 @@ const Blog = () => {
             </a>
           </div>
           <div className="icon">
-            <FaNewspaper style={{ background: "transparent" }} size={75} />
+            <FaNewspaper
+              style={{
+                background: "transparent",
+                color: "#81c784",
+                padding: "0.5rem",
+                borderRadius: "0",
+              }}
+              size={65}
+            />
           </div>
         </div>
       </div>

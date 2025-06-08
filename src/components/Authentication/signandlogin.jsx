@@ -81,15 +81,6 @@ function AuthPage() {
       alert(err.message);
     }
   };
-  // const handleLogout = async () => {
-  //   try {
-  //     await signOut(auth);
-  //     alert("Logged out successfully!");
-  //     // Optionally redirect user to login page
-  //   } catch (error) {
-  //     console.error("Logout error:", error);
-  //   }
-  // };
 
   return (
     <div>

@@ -7,6 +7,7 @@ import { IoMdClose } from "react-icons/io";
 import myImg from "../assets/Logo.png";
 import "./Navbar.css"; // Assuming you have a CSS file for styling the Navbar
 import { Link } from "react-router-dom";
+import ProfileSection from "./Authentication/ProfileDropdown";
 
 const Navbar = () => {
   const [isSearchOpen, setSearchOpen] = useState(false);
@@ -17,12 +18,9 @@ const Navbar = () => {
     <>
       <header>
         <ul className="header-links">
-          <li>Find a Doctor</li>
-          <li>About us</li>
-          <li>Contact us</li>
-          <li className="icon">
-            <FiPhoneCall className="i" /> Request a Callback
-          </li>
+          <Link to={"/about"}>
+            <li>About us</li>
+          </Link>
         </ul>
       </header>
       <hr className="line" />
@@ -42,13 +40,11 @@ const Navbar = () => {
           <div className="nav-links">
             <ul className="diff-links">
               <li>
-                <a href="#Hospitals" className="icon">
-                  Hospitals
-                </a>
+                <Link to="/hospitals">Hospitals</Link>
               </li>
-              <li>
-                <a href="#Enquiry">Quick Enquiry</a>
-              </li>
+              <Link to="/doctors">
+                <li>Find a Doctor</li>
+              </Link>
             </ul>
             <ul className="fix-bar">
               <li className="search">
@@ -60,9 +56,12 @@ const Navbar = () => {
                   }}
                 />
               </li>
-              <Link to="/login" className="link">
+              <li>
+                <ProfileSection />
+              </li>
+              {/* <Link to="/login" className="link">
                 <li className="Articles">Login</li>
-              </Link>
+              </Link> */}
               <li className="emergency">
                 <a href="#Emergency">
                   <FaAmbulance className="emerg" />{" "}
@@ -96,24 +95,6 @@ const Navbar = () => {
           </div>
         )}
       </nav>
-      {isMoreDetailsOpen && (
-        <div className="navbar">
-          <div className="cont1"></div>
-          <div className="cont2">
-            <ul className={`nav-Mlinks `}>
-              <li>Request a Callback</li>
-              <li>Find a Doctor</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
-            </ul>
-            <ul className={`nav-Mlinks `}>
-              <li>Quick Enquiry</li>
-              <li>Hospitals</li>
-              <li>Articles</li>
-            </ul>
-          </div>
-        </div>
-      )}
     </>
   );
 };

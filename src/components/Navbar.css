@@ -37,9 +37,9 @@ ul{
   gap: 35px;
 }
 
-nav li:hover:not(.Articles){
+/* nav li:hover:not(.Articles){
   font-weight: bold;
-}
+} */
 
 .search{
   cursor: pointer;
@@ -193,9 +193,9 @@ hr.line{
   .search{
     font-size: 2.5rem;
   }
-  .detail{
+  /* .detail{
     display: block;
-  }
+  } */
   ul{
     gap: 1rem; 
   }
