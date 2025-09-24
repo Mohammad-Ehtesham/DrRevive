@@ -14,7 +14,7 @@ const Home = () => {
       <div className="banner-content">
         <h1 className="banner-title">Dr. Revive –</h1>
         <p className="banner-description">
-          Your Health Companion, From Chat to Care.
+          YOUR HEALTH COMANION . FROM CHAT TO CARE
         </p>
         <Link to="/chatbot">
           <button className="banner-button">Get Started</button>
